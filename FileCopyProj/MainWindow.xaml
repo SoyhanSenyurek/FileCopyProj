@@ -1,0 +1,28 @@
+﻿<Window x:Class="FileCopyProj.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileCopyProj"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid Margin="0,0,0,45.667">
+            <TextBox HorizontalAlignment="Left" Height="43" Margin="30,10,0,0" TextWrapping="Wrap"   
+                 Text="Source" VerticalAlignment="Top" Width="436" Name="SourceFileNameTextBox"/>
+            <Button x:Name="SourceBrowseButton" Content="Browse a file" HorizontalAlignment="Left"   
+                Margin="485,13,0,0" VerticalAlignment="Top" Width="121" Click="SourceBrowseButton_Click"   
+                RenderTransformOrigin="1.047,0.821" Height="40"/>
+            <TextBox HorizontalAlignment="Left" Height="43" Margin="30,79,0,0" TextWrapping="Wrap"   
+                 Text="Target" VerticalAlignment="Top" Width="436" Name="TargetFileNameTextBox"/>
+            <Button x:Name="TargetBrowseButton" Content="Browse a file" HorizontalAlignment="Left"   
+                Margin="485,79,0,0" VerticalAlignment="Top" Width="121" Click="TargetBrowseButton_Click"   
+                RenderTransformOrigin="1.047,0.821" Height="40"/>
+            <Button x:Name="CopyButton" Content="Copy" HorizontalAlignment="Left"   
+                Margin="30,147,0,0" VerticalAlignment="Top" Width="121" Click="CopyButton_Click"   
+                RenderTransformOrigin="1.047,0.821" Height="40"/>
+
+
+        </Grid>
+    </Grid>
+</Window>
