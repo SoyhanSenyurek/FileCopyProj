@@ -109,6 +109,14 @@ namespace FileCopyProj
             {
                 MessageBox.Show("Kaynak ve Hedef Klasör Belirtilmedi", "Softtech");
             }
+            else if(!Directory.Exists(SourceFileNameTextBox.Text))
+            {
+                MessageBox.Show("Kaynak Klasör Hatalı", "Softtech");
+            }
+            else if (!Directory.Exists(TargetFileNameTextBox.Text))
+            {
+                MessageBox.Show("Hedef Klasör Hatalı", "Softtech");
+            }
             else if(SourceFileNameTextBox.Text==TargetFileNameTextBox.Text)
             {
                 MessageBox.Show("Kaynak ve Hedef Klasör Aynı", "Softtech");
