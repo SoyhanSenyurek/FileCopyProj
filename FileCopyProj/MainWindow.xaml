@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid Margin="0,0,0,45.667">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="253*"/>
+            <RowDefinition Height="181*"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="0,10,0,36" Grid.RowSpan="2">
             <TextBox HorizontalAlignment="Left" Height="43" Margin="30,10,0,0" TextWrapping="Wrap"   
                  Text="Source" VerticalAlignment="Top" Width="436" Name="SourceFileNameTextBox"/>
             <Button x:Name="SourceBrowseButton" Content="Browse a file" HorizontalAlignment="Left"   
@@ -19,8 +23,49 @@
                 Margin="485,79,0,0" VerticalAlignment="Top" Width="121" Click="TargetBrowseButton_Click"   
                 RenderTransformOrigin="1.047,0.821" Height="40"/>
             <Button x:Name="CopyButton" Content="Copy" HorizontalAlignment="Left"   
-                Margin="30,147,0,0" VerticalAlignment="Top" Width="121" Click="CopyButton_Click"   
-                RenderTransformOrigin="1.047,0.821" Height="40"/>
+                Margin="313,138,0,0" VerticalAlignment="Top" Width="153" Click="CopyButton_Click"   
+                RenderTransformOrigin="1.047,0.821" Height="30"/>
+            <ComboBox Margin="30,138,0,0" Name="ComboBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="255" Height="30" SelectedIndex="1">
+                <ComboBoxItem Content="Hedef klasörü temizle"></ComboBoxItem>
+                <ComboBoxItem Content="Hedef klasörü tut"></ComboBoxItem>
+            </ComboBox>
+            <TreeView x:Name="SourceTreeView" Margin="10,207,410,0" Width="370">
+                <TreeView.Resources>
+                    <Style TargetType="{x:Type TreeViewItem}">
+                        <Setter Property="HeaderTemplate">
+                            <Setter.Value>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <CheckBox Focusable="False" IsChecked="False" VerticalAlignment="Center"/>
+                                        <TextBlock Text="{Binding}" Margin="5,0" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </TreeView.Resources>
+            </TreeView>
+            <TreeView x:Name="TargetTreeView" Margin="420,207,10,0" Width="370">
+                <TreeView.Resources>
+                    <Style TargetType="{x:Type TreeViewItem}">
+                        <Setter Property="HeaderTemplate">
+                            <Setter.Value>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <CheckBox Focusable="False" IsChecked="False" VerticalAlignment="Center"/>
+                                        <TextBlock Text="{Binding}" Margin="5,0" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </TreeView.Resources>
+            </TreeView>
+           
+
+
+
+
 
 
         </Grid>
